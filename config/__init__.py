@@ -1,1 +1,1 @@
-from .config import client, MODEL
+from .config import client, MODEL, async_client

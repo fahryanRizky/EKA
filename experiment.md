@@ -23,3 +23,15 @@ chain of thought: meminta llm untuk menulis langkah berpikirnya sebelum menjawab
 structured output: meminta llm untuk mengembalikan output kedalam format terstruktur(json), bukan teks bebas.
 
 Prompt engineering bukan "sihir". Ini kontrol. Semakin spesifik prompt, semakin terprediksi output. Untuk agent, kita butuh output yang bisa di-parse — karena itu structured output + validasi (extract_json) wajib.
+
+
+history: llm dapat menjawab pertanyaan yang sudah berlalu
+streaming: memunculkan output token pertoken(user tidak perlu menunggu lama jika respon nya panjang)
+-> tidak dipakai jika:
+-kalau butuh output lengkap untuk di parse
+-butuh validasi sebelum ditampilkan
+-untuk agent reasoning internal
+
+Assync: memperdalam pencarian, namun mempersingkat waktu pencarian.
+dipakai ketika:
+-cari di google, wikipedia dll
